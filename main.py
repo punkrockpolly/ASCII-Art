@@ -14,11 +14,6 @@ template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir), 
                                 autoescape = True)
 
-#JINJA_ENVIRONMENT = jinja2.Environment(
-#    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
-#    extensions=['jinja2.ext.autoescape'])
-
-
 class Handler(webapp2.RequestHandler):
     def write(self, *a, **kw):
         self.response.out.write(*a, **kw)
